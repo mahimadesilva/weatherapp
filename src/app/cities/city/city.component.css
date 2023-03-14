@@ -1,0 +1,21 @@
+.box {
+  position: relative;
+  height: 370px;
+  width: 580px;
+  background-color: #373b47;
+  min-height: 370px;
+}
+img {
+  width: 580px;
+  height: 218px;
+}
+.color-box {
+  width: 580px;
+  height: 218px;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #40b681;
+  opacity: 75%;
+}

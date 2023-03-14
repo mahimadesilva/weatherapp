@@ -1,0 +1,12 @@
+html {
+  font-family: 'Open Sans', sans-serif;;
+}
+body {
+  min-width: fit-content;
+  background-color: #1f2128;
+  font-size: 16px;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}

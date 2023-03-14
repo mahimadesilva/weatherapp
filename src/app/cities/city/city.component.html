@@ -1,9 +1,9 @@
 <div class="box">
   <img src="../../../assets/images/cloud_bg.png" alt="cloud_bg">
-  <div class="color-box"></div>
+  <div class="color-box" [ngStyle]="{ backgroundColor: citiesService.cityColors[index%5]}"></div>
+  <p>{{ city.name }}</p>
+  <p>Temperature: {{ city.temperature}}</p>
+  <p>Description: {{ city.weather[0].desc}}</p>
+  <p>ID: {{ city.id}}</p>
+  <p>DT: {{ city.dt}}</p>
 </div>
-<p>{{ city.name }}</p>
-<p>Temperature: {{ city.temperature}}</p>
-<p>Description: {{ city.weather[0].desc}}</p>
-<p>ID: {{ city.id}}</p>
-<p>DT: {{ city.dt}}</p>

@@ -4,10 +4,13 @@
   width: 580px;
   background-color: #373b47;
   min-height: 370px;
+  border-radius: 8px;
+  /* cursor: pointer; */
 }
 img {
   width: 580px;
   height: 218px;
+  border-radius: 8px 8px 0 0;
 }
 .color-box {
   width: 580px;
@@ -18,4 +21,6 @@ img {
   left: 0;
   background-color: #40b681;
   opacity: 75%;
+  border-radius: 8px 8px 0 0;
+
 }

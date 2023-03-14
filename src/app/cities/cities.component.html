@@ -1,5 +1,7 @@
 <div class="container">
-  <div *ngFor="let city of cities">
-    <app-city [city]="city"></app-city>
+  <div class="cities">
+    <div *ngFor="let city of cities; let i = index;" class="city">
+      <app-city [city]="city" [index]="i"></app-city>
+    </div>
   </div>
 </div>

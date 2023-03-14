@@ -8,6 +8,7 @@ import cityList from '../../assets/cities.json';
 export class CitiesService {
   cities: any[] = [];
   cityCodeList = cityList.List.map((city) => city.CityCode);
+  public cityColors = ['#378de7', '#6149cb', '#60b681', '#de934e', '#9c3939'];
 
   constructor(private http: HttpClient) {}
 

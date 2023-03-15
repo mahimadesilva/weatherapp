@@ -12,7 +12,5 @@ export class CityComponent implements OnInit {
 
   constructor(public citiesService: CitiesService) { }
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

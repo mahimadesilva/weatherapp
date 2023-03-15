@@ -1,9 +1,11 @@
 <div class="box" [routerLink]="[index]">
   <img src="../../../assets/images/cloud_bg.png" alt="cloud_bg">
   <div class="color-box" [ngStyle]="{ backgroundColor: citiesService.cityColors[index%5]}"></div>
-  <p>{{ city.name }}</p>
-  <p>Temperature: {{ city.temperature}}</p>
-  <p>Description: {{ city.weather[0].desc}}</p>
-  <p>ID: {{ city.id}}</p>
-  <p>DT: {{ city.dt}}</p>
+  <div class="text-box">
+    <p class="city-name">{{ city.name }}</p>
+    <p class="city-temp">{{ city.main.temp }} K</p>
+    <p class="city-desc">{{ city.weather[0].description | titlecase}}</p>
+  </div>
+  <p class="city-id">ID: <span>{{ city.id }}</span></p>
+  <p class="city-dt">Data Updated At: <span>{{  city.dt | date:'h:mm a'}}</span></p>
 </div>

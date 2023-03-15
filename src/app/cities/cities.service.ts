@@ -38,7 +38,7 @@ export class CitiesService {
     return false;
   }
   private getCities() {
-    const url = `http://api.openweathermap.org/data/2.5/group?id=${this.cityCodeList.join(
+    const url = `https://api.openweathermap.org/data/2.5/group?id=${this.cityCodeList.join(
       ','
     )}&units;=metric&appid=e4e5a640da20f3a05005a29745eda68c`;
 

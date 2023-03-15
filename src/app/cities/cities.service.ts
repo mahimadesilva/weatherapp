@@ -9,7 +9,7 @@ export class CitiesService {
   public cities: any[] = [];
   cityCodeList = cityList.List.map((city) => city.CityCode);
   public cityColors = ['#378de7', '#6149cb', '#60b681', '#de934e', '#9c3939'];
-  citiesExpireTimeLimit = 3600000;
+  citiesExpireTimeLimit = 300000;
 
   constructor(private http: HttpClient) {
     if (this.wasAppRefreshedAndCitiesNotExpired()) {

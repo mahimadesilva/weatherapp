@@ -11,19 +11,6 @@ export class CitiesComponent implements OnInit {
   cities: any[] = [];
   constructor(public citiesService: CitiesService) {}
 
-  ngOnInit(): void {
-    // this.getCities();
-  }
-  // getCities() {
+  ngOnInit(): void {}
 
-  //   this.citiesService.getCities().subscribe(
-  //     (data) => {
-  //       this.cities = data;
-  //       console.log(this.cities)
-  //     },
-  //     (err) => {
-  //       console.log(err);
-  //     }
-  //   );
-  // }
 }

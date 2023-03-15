@@ -1,0 +1,20 @@
+html {
+  font-family: 'Open Sans', sans-serif;;
+}
+body {
+  position: relative;
+  min-width: fit-content;
+  min-height: 100vh;
+  background-color: #1f2128;
+  font-size: 16px;
+}
+body::after {
+  content: '';
+  display: block;
+  height: 92px;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}

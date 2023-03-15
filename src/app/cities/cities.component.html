@@ -1,6 +1,6 @@
 <div class="container">
   <div class="cities">
-    <div *ngFor="let city of cities; let i = index;" class="city">
+    <div *ngFor="let city of citiesService.cities; let i = index;" class="city">
       <app-city [city]="city" [index]="i"></app-city>
     </div>
   </div>

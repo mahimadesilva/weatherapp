@@ -9,20 +9,21 @@ import { CitiesService } from './cities.service';
 })
 export class CitiesComponent implements OnInit {
   cities: any[] = [];
-  constructor(private citiesService: CitiesService) {}
+  constructor(public citiesService: CitiesService) {}
 
   ngOnInit(): void {
-    this.getCities();
+    // this.getCities();
   }
-  getCities() {
-    this.citiesService.getCities().subscribe(
-      (data) => {
-        this.cities = data;
-        console.log(this.cities)
-      },
-      (err) => {
-        console.log(err);
-      }
-    );
-  }
+  // getCities() {
+
+  //   this.citiesService.getCities().subscribe(
+  //     (data) => {
+  //       this.cities = data;
+  //       console.log(this.cities)
+  //     },
+  //     (err) => {
+  //       console.log(err);
+  //     }
+  //   );
+  // }
 }

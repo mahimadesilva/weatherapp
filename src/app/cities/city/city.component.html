@@ -1,4 +1,4 @@
-<div class="box">
+<div class="box" [routerLink]="[index]">
   <img src="../../../assets/images/cloud_bg.png" alt="cloud_bg">
   <div class="color-box" [ngStyle]="{ backgroundColor: citiesService.cityColors[index%5]}"></div>
   <p>{{ city.name }}</p>

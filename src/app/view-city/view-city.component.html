@@ -1,0 +1,11 @@
+<div class="container container-box">
+  <p class="arrow" routerLink="/">&larr;</p>
+  <div class="box-top" [ngStyle]="{ backgroundColor: citiesService.cityColors[index%5]}"></div>
+  <div class="box-bottom">
+    <p>{{ citiesService.cities[index].name }}</p>
+  <p>Temperature: {{ citiesService.cities[index].temperature}}</p>
+  <p>Description: {{ citiesService.cities[index].weather[0].desc}}</p>
+  <p>ID: {{ citiesService.cities[index].id}}</p>
+  <p>DT: {{ citiesService.cities[index].dt}}</p>
+  </div>
+</div>

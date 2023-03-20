@@ -27,7 +27,7 @@ export class CityComponent implements OnInit {
     this.renderer.setStyle(
       this.colorBox.nativeElement,
       'background-color',
-      this.citiesService.cityColors[this.index % 5]
+      this.citiesService.cityColors[this.index % this.citiesService.cityColors.length]
     );
   }
 }

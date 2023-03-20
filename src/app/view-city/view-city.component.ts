@@ -27,7 +27,7 @@ export class ViewCityComponent implements OnInit {
     this.renderer.setStyle(
       this.boxTop.nativeElement,
       'background-color',
-      this.citiesService.cityColors[this.index % 5]
+      this.citiesService.cityColors[this.index % this.citiesService.cityColors.length]
     );
   }
 }

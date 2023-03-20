@@ -1,6 +1,6 @@
 <div class="box" [routerLink]="[index]">
   <img src="../../../assets/images/cloud_bg.png" alt="cloud_bg">
-  <div class="color-box" [ngStyle]="{ backgroundColor: citiesService.cityColors[index%5]}"></div>
+  <div class="color-box" #colorBox></div>
   <div class="text-box">
     <p class="city-name">{{ city.name }}</p>
     <p class="city-temp">{{ city.main.temp }} K</p>

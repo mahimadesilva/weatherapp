@@ -6,7 +6,7 @@ import {
   ViewChild,
 } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { CitiesService } from '../cities/cities.service';
+import { CitiesService } from '../cities.service';
 
 @Component({
   selector: 'app-view-city',
@@ -14,20 +14,14 @@ import { CitiesService } from '../cities/cities.service';
   styleUrls: ['./view-city.component.css'],
 })
 export class ViewCityComponent implements OnInit {
-  index = 0;
+  cityCode = 0;
   @ViewChild('boxTop', { static: true }) boxTop!: ElementRef;
   constructor(
     private route: ActivatedRoute,
-    public citiesService: CitiesService,
-    private renderer: Renderer2
+    public citiesService: CitiesService
   ) {}
 
   ngOnInit(): void {
-    this.index = this.route.snapshot.params['index'];
-    this.renderer.setStyle(
-      this.boxTop.nativeElement,
-      'background-color',
-      this.citiesService.cityColors[this.index % this.citiesService.cityColors.length]
-    );
+    this.cityCode = this.route.snapshot.params['cityCode'];
   }
 }

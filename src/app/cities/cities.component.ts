@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
-import { CitiesService } from './cities.service';
+import { CitiesService } from '../cities.service';
 
 @Component({
   selector: 'app-cities',

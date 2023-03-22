@@ -6,7 +6,7 @@ import {
   Renderer2,
   ViewChild,
 } from '@angular/core';
-import { CitiesService } from '../cities.service';
+import { CitiesService } from '../../cities.service';
 
 @Component({
   selector: 'app-city',

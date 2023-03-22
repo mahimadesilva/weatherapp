@@ -5,7 +5,7 @@ import { ViewCityComponent } from './view-city/view-city.component';
 
 const routes: Routes = [
   {path: '', component: CitiesComponent},
-  {path: ':index', component: ViewCityComponent}
+  {path: ':cityCode', component: ViewCityComponent}
 ];
 
 @NgModule({

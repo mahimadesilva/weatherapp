@@ -1,10 +1,4 @@
-import {
-  Component,
-  ElementRef,
-  OnInit,
-  Renderer2,
-  ViewChild,
-} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CitiesService } from '../cities.service';
 
@@ -14,8 +8,7 @@ import { CitiesService } from '../cities.service';
   styleUrls: ['./view-city.component.css'],
 })
 export class ViewCityComponent implements OnInit {
-  cityCode = 0;
-  @ViewChild('boxTop', { static: true }) boxTop!: ElementRef;
+  cityCode = '';
   constructor(
     private route: ActivatedRoute,
     public citiesService: CitiesService
@@ -23,5 +16,16 @@ export class ViewCityComponent implements OnInit {
 
   ngOnInit(): void {
     this.cityCode = this.route.snapshot.params['cityCode'];
+    this.citiesService.getCityByCityCode(this.cityCode);
+    // Wait a second until http requests are done
+    setTimeout(
+      (() => {
+        sessionStorage.setItem(
+          'cities',
+          JSON.stringify(this.citiesService.cities)
+        );
+      }).bind(this.citiesService),
+      1000
+    );
   }
 }

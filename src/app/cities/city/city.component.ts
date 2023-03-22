@@ -1,11 +1,4 @@
-import {
-  Component,
-  ElementRef,
-  Input,
-  OnInit,
-  Renderer2,
-  ViewChild,
-} from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CitiesService } from '../../cities.service';
 
 @Component({
@@ -16,18 +9,8 @@ import { CitiesService } from '../../cities.service';
 export class CityComponent implements OnInit {
   @Input() city: any = {};
   @Input() index: number = 0;
-  @ViewChild('colorBox', {static: true}) colorBox!: ElementRef;
 
-  constructor(
-    public citiesService: CitiesService,
-    private renderer: Renderer2
-  ) {}
+  constructor(public citiesService: CitiesService) {}
 
-  ngOnInit(): void {
-    this.renderer.setStyle(
-      this.colorBox.nativeElement,
-      'background-color',
-      this.citiesService.cityColors[this.index % this.citiesService.cityColors.length]
-    );
-  }
+  ngOnInit(): void {}
 }

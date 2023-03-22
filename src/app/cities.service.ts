@@ -4,7 +4,6 @@ import { environment } from 'src/environments/environment';
 
 @Injectable({ providedIn: 'root' })
 export class CitiesService {
-  cityColors = ['#378de7', '#6149cb', '#60b681', '#de934e', '#9c3939'];
   citiesExpireTimeLimit = 300000;
   cities: any = {};
 

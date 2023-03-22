@@ -1,6 +1,6 @@
 <div class="container container-box">
   <p class="arrow" routerLink="/">&larr;</p>
-  <div class="box-top" #boxTop>
+  <div class="box-top">
     <p class="city-name">{{ citiesService.cities[cityCode].name }}</p>
     <p class="city-temp">{{ citiesService.cities[cityCode].main.temp}} K</p>
     <p class="city-desc">{{ citiesService.cities[cityCode].weather[0].description | titlecase}}</p>

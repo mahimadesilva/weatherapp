@@ -1,10 +1,14 @@
 <div class="box" [routerLink]="[city.id]">
-  <img src="../../../assets/images/cloud_bg.png" alt="cloud_bg">
+  <img class="background-cloud-image" src="../../../assets/images/cloud_bg.png" alt="cloud_bg">
   <div class="color-box"></div>
   <div class="text-box">
     <p class="city-name">{{ city.name }}</p>
-    <p class="city-temp">{{ city.main.temp }} K</p>
-    <p class="city-desc">{{ city.weather[0].description | titlecase}}</p>
+    <p class="city-temp">{{ +city.main.temp - 273.15 | number: '1.0-0' }} &deg;C</p>
+    <div class="icon-and-description">
+      <img class="weather-icon" [src]="'https://openweathermap.org/img/wn/'+city.weather[0].icon+'@2x.png'" alt="icon">
+      <p class="city-desc">{{ city.weather[0].description | titlecase}}</p>
+    </div>
+
   </div>
   <p class="city-id">ID: <span>{{ city.id }}</span></p>
   <p class="city-dt">Data Updated At: <span>{{  city.dt | date:'h:mm a'}}</span></p>
